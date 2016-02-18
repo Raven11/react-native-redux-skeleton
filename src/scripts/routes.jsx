@@ -29,6 +29,12 @@ const getHomeRoute = () => ({
     getTitle() {
         return 'Welcome';
     },
+
+  renderRightButton() {
+    return (
+      <Button onPress={() => {console.log('Tapped right button'); }}>Log</Button>
+    );
+  },
 });
 
 const getProfileRoute = (profile) => ({
@@ -64,7 +70,7 @@ const getProfileRoute = (profile) => ({
     },
 
     configureScene() {
-        return ExNavigator.SceneConfigs.PushFromRight;
+        return ExNavigator.SceneConfigs.FloatFromBottom;
     },
 
     // Render the view to display on the right side of the navigation bar. It
